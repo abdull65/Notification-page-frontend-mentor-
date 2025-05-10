@@ -1,0 +1,16 @@
+ @media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+      padding: 1rem;
+    }
+  
+    .notifications-header h1 {
+      font-size: 1.25rem;
+    }
+  
+    #mark-all-read {
+      font-size: 0.9rem;
+    }
+  }

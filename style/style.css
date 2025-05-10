@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "PlusJakartaSans-VariableFont_wght.ttf";
+    src: url(/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "PlusJakartaSans-Medium";
+    src: url(/fonts/PlusJakartaSans-Medium.ttf);
+}
+@font-face {
+    font-family: "PlusJakartaSans-ExtraBold";
+    src: url(/fonts/PlusJakartaSans-ExtraBold.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'PlusJakartaSans-Medium', sans-serif;
+    background-color: #f5f6fa;
+    padding: 1rem;
+    color: #333;
+    height: 100vh;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 100%;
+}
+
+  
+  .notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .notifications-header h1 {
+    font-size: 1.2rem;
+  }
+  
+  #unread-count {
+    background-color: #0c3178;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    margin-left: 0.5rem;
+  }
+  
+  #mark-all-read {
+    background-color: transparent;
+    border: none;
+    color: #0c3178;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #mark-all-read:hover {
+    text-decoration: underline;
+  }
+ 
+  .notifications-list .notification {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s;
+  }
+  
+  .notification.unread {
+    background-color: #f6fafd;
+    border-left: 4px solid #0c3178;
+  }
+  
+  .notification .avater-box  {
+    height: 30px;
+    width: 30px;
+  }
+  .notification .avater-box img {
+    width: 30px;
+  }
+  .notification .avater-box img.avater2 {
+    width: 40px;
+  }
+  .notification .text-box p {
+    line-height: 1.5;
+  }
+  
+  .notification .text-box .timestamp {
+    display: block;
+    font-size: 0.875rem;
+    color: #888;
+    margin-top: 0.5rem;
+  }
+
+  .notification .text-box .red-label {
+    display: none;
+  }
+  .notification.unread .red-label {
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    margin-top: -10px;
+    margin-left: 3px;
+    background-color: rgb(248, 48, 48);
+    border-radius: 50%;
+  }
+  .notification .text-box p.message {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .btn-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .btn-box .action-btn{
+        font-size: 12px;
+        color: #0c3178;
+    }
