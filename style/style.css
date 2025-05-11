@@ -30,11 +30,13 @@
     max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
-    padding: 2rem;
+    padding:0 2rem 2rem;
+
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     height: 100%;
+    position: relative;
 }
 
   
@@ -43,6 +45,13 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 9999;
   }
   
   .notifications-header h1 {
@@ -70,6 +79,9 @@
     text-decoration: underline;
   }
  
+  .notifications-list {
+    margin-top: 40px;
+  }
   .notifications-list .notification {
     display: flex;
     align-items: start;
