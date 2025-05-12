@@ -90,13 +90,11 @@
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1rem;
-    border: 1px solid #e0e0e0;
     transition: background-color 0.3s;
   }
   
   .notification.unread {
     background-color: #f6fafd;
-    border-left: 4px solid #0c3178;
   }
   
   .notification .avater-box  {
