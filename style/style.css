@@ -97,15 +97,19 @@
     background-color: #f6fafd;
   }
   
-  .notification .avater-box  {
+  .notification .avatarBox  {
     height: 30px;
     width: 30px;
   }
-  .notification .avater-box img {
+  .notification .avatarBox img {
     width: 30px;
   }
-  .notification .avater-box img.avater2 {
+  .targetImageBox {
+    margin-left: auto;
+  }
+  .notification img.targetImage {
     width: 40px;
+    margin-left: auto;
   }
   .notification .text-box p {
     line-height: 1.5;
@@ -136,4 +140,7 @@
     border: 1px solid #dddddd;
     border-radius: 5px;
     font-size: 14px;
+  }
+  .target {
+    color: #0c3178;
   }
