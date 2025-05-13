@@ -1,3 +1,14 @@
+const notificationData = [
+  {
+    userAvater: "./images/avatar-angela-gray.webp",
+    userName: "Mark Webber",
+    message: "reacted to your post",
+    timestamp: "1m ago"
+    
+  }
+]
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const markAllBtn = document.getElementById('mark-all-read');
     const notifications = document.querySelectorAll('.notification');
