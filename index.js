@@ -7,7 +7,7 @@ const notificationData = [
     timeAgo: "1m ago",
     message: "",
     targetImage: null,
-    read: false,
+    status: false,
   },
   {
     avatar: "./images/avatar-anna-kim.webp",
@@ -17,7 +17,7 @@ const notificationData = [
     timeAgo: "5m ago",
     message: "",
     targetImage: null,
-    read: false,
+    status: false,
   },
   {
     avatar: "./images/avatar-jacob-thompson.webp",
@@ -27,7 +27,7 @@ const notificationData = [
     timeAgo: "1 day ago",
     message: "",
     targetImage: null,
-    read: false,
+    status: false,
   },
   {
     avatar: "./images/avatar-kimberly-smith.webp",
@@ -38,7 +38,7 @@ const notificationData = [
     message: `Hello thank you for setting up the Chess Club. i've been a member 
     for a few weeks now and i'm already having lots of funand improving my game.`,
     targetImage: null,
-    read: false,
+    status: false,
   },
   {
     avatar: "./images/avatar-mark-webber.webp",
@@ -48,7 +48,7 @@ const notificationData = [
     timeAgo: "1m ago",
     message: "",
     targetImage: "./images/image-chess.webp",
-    read: false,
+    status: false,
   },
   {
     avatar: "./images/avatar-nathan-peterson.webp",
@@ -58,7 +58,7 @@ const notificationData = [
     timeAgo: "2 weeks ago",
     message: "",
     targetImage: null,
-    read: false,
+    status: false,
   },
   {
     avatar: "./images/avatar-rizky-hasanuddin.webp",
@@ -68,10 +68,9 @@ const notificationData = [
     timeAgo: "2 weeks ago",
     message: "",
     targetImage: null,
-    read: false,
+    status: false,
   }
 ]
-
 document.addEventListener('DOMContentLoaded', () => {
   const markAllBtn = document.getElementById('mark-all-read');
   const notifications = document.querySelector('.notifications-list');
@@ -84,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       img.alt = notification.userName;
       img.className = "avatar";
 
-          const targetImageEl = document.createElement("img");
+      const targetImageEl = document.createElement("img");
       targetImageEl.src = notification.targetImage;
       targetImageEl.className = "targetImage";
       targetImageEl.alt = "target Image";
@@ -116,9 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Handle click on individual notification
       const notificationEl = innerDiv.querySelector(".notification");
       notificationEl.addEventListener("click", () => {
-          notificationEl.classList.toggle("unread");
-          if(notificationEl.classList.contains("unread")) {
-          }
+      notification.status = !notification.status
+          notificationEl.classList.toggle("unread", !notification.status);
+      console.log(`${notification.userName}'s ${notification.status ? "notification marked as read" : "notification marked as unread" }`, notification);
           updateUnreadCount();
       });
   });
@@ -127,6 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
   markAllBtn.addEventListener("click", () => {
       document.querySelectorAll('.notification.unread').forEach((notif) => {
           notif.classList.remove("unread");
+      });
+      notificationData.forEach(n =>  {
+      n.status = true;
+      console.log(`${n.userName}'s notification marked as read (bulk):`, n);
+      console.log(n)
       });
       updateUnreadCount();
   });
